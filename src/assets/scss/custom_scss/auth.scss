@@ -1,0 +1,101 @@
+@import "./variable.scss";
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .error-alert {
+    position: absolute;
+    top: 3%;
+    width: 30%;
+  }
+
+  .auth-container {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 346px;
+    height: 409px;
+    background: $white;
+    border: 1px solid #e5e8ef;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+
+
+    .logoText {
+      position: absolute;
+      left: calc(50% - 110px / 2 + 0.5px);
+      top: 75px;
+    }
+
+    .signin-wrapper {
+      position: absolute;
+      top: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      overflow: hidden;
+
+      input {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+        width: 250px;
+        height: 35px;
+        border: none;
+        background: rgba(229, 232, 239, 0.75);
+        border-radius: 5px;
+
+      }
+
+      .form-label {
+        @extend %font-regular;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: normal;
+      }
+
+      .forgot-password {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .primary-btn {
+        background: $primary;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3;
+}
+
+.forgetPasswordText {
+  font-family: "Lexend";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.primary {
+  @extend %primary-button;
+}

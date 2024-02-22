@@ -1,0 +1,114 @@
+$primary: #5e6fec;
+$grey-dark: #6c757d;
+$grey: #cdd4df;
+$grey-light: #e5e8ef;
+$grey-200: #e8e9eb;
+$grey-300: #e7eafe;
+$white: #fff;
+$Low: #008000;
+$High: #f0496d;
+$Medium: #ffa500;
+$default: #33079985;
+$black: #000000;
+$cirtical: #800020;
+$untrigred: #29c5f6;
+$rank-1:#BE5454;
+$rank-2:#D7885B;
+$rank-3:#E8C279;
+$rank-4:#F6ED00;
+$rank-5:#D2D700;
+$black-light: #202124;
+$grayed-out-line: rgba(128, 128, 128, 0.55);
+$danger: #f83838;
+$font-lexenddeca: 'Lexend Deca',
+sans-serif;
+$font-nunito: 'Nunito',
+sans-serif;
+
+%font-regular {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+%font-lexend {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+}
+
+%font-title {
+  font-family: "Lexend Deca";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@mixin severity($severity: $Low) {
+  background-color: $severity;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: capitalize;
+}
+
+@mixin ranking($ranking: $Low) {
+  color: $ranking;
+  font-size: 20px;
+  font-family: "Nunito";
+  font-weight: 700;
+}
+
+%primary-button {
+  background: $primary !important;
+  color: $white;
+}
+
+%logo {
+  font-family: "Bruno Ace", "cursive";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: #000000;
+}
+
+%suppress-btn {
+  @extend %font-regular;
+  border-radius: 2px;
+  background: $primary;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  color: $white;
+  border: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+%table-header {
+  color: #af1834 !important;
+  letter-spacing: normal !important;
+  font-family: "Nunito" !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  text-transform: capitalize !important;
+}
+
+:root {
+
+  --new-neutral-labels: af1834;
+  --bg-blue: #F4F7F6;
+  --new-neutral-bg-dark: #EBEFEF;
+  --new-nuetral-borders: #E8E9EB;
+  --new-neutral-bg: #F9FAFA;
+  --cs-text-opacity: 1
+}

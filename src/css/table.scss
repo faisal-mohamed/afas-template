@@ -1,0 +1,229 @@
+@import "./_variable.scss";
+
+.table {
+  box-sizing: border-box;
+  border-bottom: 1px solid $grey-300;
+  background: $white;
+
+  &.report-table {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+
+    .thead {
+      @extend %font-lexend;
+      font-weight: 500;
+      font-size: 10px;
+      background: $white;
+      letter-spacing: 1px;
+      color: $grey-dark;
+      text-transform: uppercase;
+    }
+
+    .cell {
+      color: $black;
+      font-family: "Nunito";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+
+
+  .thead {
+
+    input {
+      font-size: 12px;
+    }
+
+    tr {
+      th {
+        font-weight: 500;
+
+        &.sortable {
+          cursor: pointer;
+
+          i {
+            font-size: 12px;
+            position: relative;
+            top: 3px;
+            left: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .table-row {
+    padding: 10px;
+    background: $white;
+
+    &.table-hover {
+      &:hover {
+        background: var(--new-neutral-bg);
+        border-radius: 2px;
+      }
+    }
+
+    .cell {
+      max-width: 300px;
+      word-wrap: break-word;
+      vertical-align: middle;
+    }
+
+    .view-more {
+      border-radius: 4px;
+      font-size: 14px;
+      background: $white;
+      padding: 8px 12px;
+      border: 1px solid $grey-200;
+      color: $primary;
+    }
+  }
+}
+
+.account {
+  color: $primary;
+  font-size: 14px;
+  font-family: "Nunito";
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.table> :not(caption)>*>* {
+  padding: 0.5rem 0.6rem;
+  border-radius: 2px;
+  color: inherit !important;
+}
+
+.config-grp-table {
+  .thead {
+    @extend %table-header;
+    background: $grey-light;
+  }
+
+  .table-row:nth-child(even) {
+    background: $white !important;
+  }
+
+  .table-row {
+    padding: 10px;
+    background: transparent !important;
+
+    .cell {
+      font-family: "Nunito";
+      font-size: 14px;
+      font-weight: 600;
+      word-wrap: break-word;
+      vertical-align: middle;
+    }
+  }
+}
+
+.drill-down-table {
+  &.table> :not(caption)>*>* {
+    border: none;
+  }
+}
+
+.rank {
+  padding: 0.75rem 0.6rem !important;
+}
+
+.rank-1 {
+  @include ranking($ranking: $rank-1);
+  text-decoration: none !important;
+}
+
+.rank-2 {
+  @include ranking($ranking: $rank-2);
+}
+
+.rank-3 {
+  @include ranking($ranking: $rank-3);
+}
+
+.rank-4 {
+  @include ranking($ranking: $rank-4);
+}
+
+.rank-5 {
+  @include ranking($ranking: $rank-5);
+}
+
+.suppress-btn {
+  @extend %suppress-btn;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.approve {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 0px 10px;
+}
+
+.common-table {
+  .table {
+    .thead {
+      color: $black;
+      text-transform: inherit;
+    }
+  }
+}
+
+.grey-header {
+  background: $grey-light !important;
+}
+
+.letter-grey {
+  font-family: "Lexend Deca" !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+
+.chart-cell {
+  color: var(--new-neutral-labels);
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ranking-header {
+  color: var(--new-neutral-labels);
+  font-family: "Lexend Deca" !important;
+  font-size: 10px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px !important;
+  text-transform: uppercase;
+}
+
+.clickable-cell {
+  &:hover {
+    background: $grey-light;
+    cursor: pointer;
+  }
+}
+
+.iam-table-header {
+  color: $grey-dark !important;
+  font-family: "Lexend Deca" !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}

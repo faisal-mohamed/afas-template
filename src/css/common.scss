@@ -1,0 +1,537 @@
+@import "../css/_variable.scss";
+
+
+@mixin custom-font($font) {
+  font-family: $font;
+  margin: 0;
+}
+
+.font-lexenddeca {
+  @include custom-font($font-lexenddeca);
+}
+
+.font-nunito {
+  @include custom-font($font-nunito);
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-black-900 {
+  --cs-text-opacity: 1;
+  color: rgb(0 0 0 / var(--cs-text-opacity));
+}
+
+.text-grey-600 {
+  --cs-text-opacity: 1;
+  color: rgb(108 117 125 / var(--cs-text-opacity));
+}
+
+.f-line-normal {
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  .pagination-label {
+    padding-right: 10px;
+  }
+
+  .pagination-range {
+    margin-top: 10px;
+  }
+}
+
+.page-wrapper {
+  display: inline;
+  position: relative;
+  top: 0.2rem
+}
+
+.pagination-btn {
+
+  i {
+    color: $primary;
+  }
+
+
+
+  &.number {
+    padding: 12px;
+    color: $primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+
+    &.active {
+      background: $primary;
+      color: $white;
+    }
+
+  }
+
+  &:disabled {
+    background: $grey-200;
+  }
+
+  background: $white;
+  padding: 0.3rem 0.5rem 0.4rem 0.5rem;
+  border: 1px solid $grey-200;
+  border-radius: 3px;
+}
+
+.nav-btn {
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+}
+
+.page-view {
+  background: $white;
+  border-radius: 5px;
+  border: 0.5px solid $grey;
+  padding: 5px 10px;
+
+  .icon {
+    font-size: large;
+  }
+}
+
+// Info canvas
+
+.info-title {
+  @extend %font-title;
+  color: $primary;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  .finding-id {
+    font-family: 'Nunito';
+    font-size: 20px;
+    line-height: 27px;
+    word-wrap: break-word;
+    font-weight: 500;
+  }
+
+  .info-content {
+    position: relative;
+    top: 20px;
+    width: 60vw;
+    overflow: auto;
+    border-radius: 5px;
+
+    .field {
+      width: 20%;
+      padding: 0.5rem 0.6rem 0.5rem 0rem;
+      color: $grey-dark !important;
+      font-family: "Nunito";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .value {
+      color: $black !important;
+      font-family: "Nunito";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+
+  }
+
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+
+  .close-btn {
+    padding: 0px 10px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    color: $primary;
+  }
+}
+
+.suppress-container {
+  background: #F9FAFA;
+  padding: 24px;
+  border: 1px solid #E8E9EB;
+  border-radius: 10px;
+
+  .assign-container {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+    .filter_input {
+
+      .filter-label {
+        color: $black;
+      }
+
+      width: 300px;
+    }
+  }
+
+  textarea {
+    background: $white;
+    color: $black;
+    height: 15vh;
+    border: 1px solid #E8E9EB;
+    border-radius: 2px;
+  }
+}
+
+.title {
+  font-family: "Nunito Bold";
+
+}
+
+.btn-secondary {
+  color: $primary;
+  border-radius: 2px;
+  border: 1px solid $grey-200;
+  background: $white;
+  padding: 8px;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--bg-blue);
+  }
+}
+
+.filter-btn {
+  color: $white;
+  padding: 9px 20px;
+  border-radius: 4px;
+  border: none;
+  background: $primary;
+  transition: all 0.3s;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+
+
+  &:hover {
+    background: #174ea6;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+
+.filter-btn-container {
+  display: inline-flex;
+  gap: 5px;
+  padding: 20px 10px 0px !important;
+}
+
+.custom-drop-item {
+  padding: 10px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.15), -1px -1px 5px 0px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.btn-primary-b2 {
+  color: $white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: $primary;
+  border: 1px solid transparent;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border: 1px solid $primary;
+    background: $grey-light;
+    color: $primary;
+  }
+}
+
+.btn-secondary-b2 {
+  border: 1px solid $grey-light;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: $grey-light;
+}
+
+.err-msg {
+  color: $danger;
+}
+
+.regulatory-cards {
+  height: 400px;
+}
+
+.cmdb-cards {
+  height: 400px
+}
+
+
+.w-22 {
+  width: 22vw;
+}
+
+.clr-blue {
+  color: $primary !important;
+}
+
+.blue-icon {
+  path {
+    fill: $primary;
+  }
+
+}
+
+
+.hover {
+  &:hover {
+    background: $grey-light;
+  }
+
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.page-report-alert {
+  position: absolute;
+  margin-top: 4%;
+  z-index: 1003;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.ff-lex {
+  font-family: "Lexend Deca" !important;
+}
+
+.ldap-input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: rgba(229, 232, 239, 0.75);
+  border: none;
+  margin-bottom: 10px;
+
+  &:focus {
+    background: rgba(229, 232, 239, 0.75);
+  }
+
+}
+
+
+.clickable-link {
+  color: #5e6fec;
+  font-family: "Nunito";
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.spinner-container {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-modal {
+
+  .content {
+    padding: 10px;
+  }
+}
+
+// SwitchButton.scss
+
+.switch-button {
+
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  width: 60px;
+  height: 30px;
+  background: $grey;
+  border-radius: 50px;
+  cursor: pointer;
+
+
+  input {
+    padding: 2px 3px;
+    display: none;
+  }
+
+  .switch-circle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+  }
+
+
+  input:checked+.switch-circle {
+    transform: translateX(30px);
+  }
+
+  &.checked {
+    background: #65D46D;
+  }
+
+  .switch-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 10px;
+    line-height: 16px;
+    color: $white;
+
+    &.t-90 {
+      transform: translate(-90%, -50%);
+    }
+  }
+}
+
+
+.fs-23 {
+  font-size: 0.2em;
+}
+
+.content_title {
+  color: $black;
+  font-family: "Lexend Deca";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.clickable {
+  color: $primary;
+  font-family: "Lexend Deca";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.dark_cell {
+  color: $black;
+  font-family: "Lexend Deca";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.nav_btn_link {
+  border-radius: 2px;
+  background: $primary;
+  padding: 12px;
+  color: $white;
+
+}
+
+.page-info {
+  color: #000000;
+  font-family: "Lexend Deca";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+.custom-scroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px !important;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #CDD4DF;
+    border-radius: 25px;
+    margin-right: 10px;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.25em;
+  }
+
+  &.bar-w-5 {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px !important;
+
+    }
+  }
+}
+
+.information-container {
+  // max-width: 600px;
+  // margin: 20px auto;
+  display: flex;
+  padding: 10px 10px 0px 10px;
+
+  .information-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    .information-label {
+      flex: 1 0 150px;
+      padding: 5px;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    .information-value {
+      flex: 1 0 calc(100% - 150px);
+      padding: 5px;
+      color: $primary;
+      font-weight: 500;
+      font-family: "Nunito";
+    }
+  }
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}

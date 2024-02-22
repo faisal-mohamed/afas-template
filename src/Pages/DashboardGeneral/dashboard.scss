@@ -1,0 +1,201 @@
+@import "../../css/_variable.scss";
+
+.TileStyle {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.WidgetName {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.WidgetCount {
+  font-family: "Lexend", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ChartTitle {
+  font-family: "Lexend", sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.BorderRadius {
+  border-radius: 10px !important;
+}
+
+.dashboard-card {
+  border-radius: 10px;
+
+  .card-header {
+    border: none;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+}
+
+
+.ViewMore {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #5e6fec;
+  text-decoration: underline;
+  font-family: "Lexend", sans-serif;
+}
+
+@mixin resources($color) {
+
+  border-left: 0.23em solid $color;
+}
+
+
+
+
+
+
+.iam-card {
+  height: 180px !important;
+}
+
+.icon path {
+  stroke: $primary;
+}
+
+.regulatory-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+}
+
+.dashboard-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+
+  .chart-5 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 4;
+  }
+}
+
+.main-dash-1 {
+  height: 300px;
+}
+
+.chart-table {
+  position: relative;
+  bottom: 100px;
+  padding: 10px;
+  border-top: 1px solid $grey-light;
+}
+
+.p-24 {
+  padding: 5px;
+}
+
+.regulatory-single {
+  height: 540px;
+}
+
+.single-acc-chart {
+  padding: 0px 30px;
+  height: 350px;
+}
+
+.cmdb-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+
+  .card-3 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 3;
+  }
+
+  .complaint-card {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .resource-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 0px;
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid $grey-light;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+
+    .s3 {
+      @include resources(#52B652)
+    }
+
+    .efs {
+      @include resources(#F0496D)
+    }
+
+    .ebs {
+
+      @include resources(#2E27AD)
+    }
+
+    .rds-instance {
+      @include resources(#b6022f)
+    }
+
+    .rds-cluster {
+      @include resources(#016701)
+    }
+
+    .complaint {
+      @include resources(#008000);
+      margin-top: 1.3rem;
+    }
+
+    .non-complaint {
+      @include resources(#f83838)
+    }
+
+    .system-role {
+      @include resources($primary)
+    }
+
+    .iam-user {
+      @include resources($untrigred)
+    }
+
+
+  }
+}

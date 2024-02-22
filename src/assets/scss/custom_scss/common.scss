@@ -1,0 +1,362 @@
+@import './variable';
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  .pagination-label {
+    padding-right: 10px;
+  }
+
+  .pagination-range {
+    margin-top: 10px;
+  }
+}
+
+.page-wrapper {
+  display: inline;
+  position: relative;
+  top: 0.2rem
+}
+
+.pagination-btn {
+
+  i {
+    color: $primary;
+  }
+
+
+
+  &.number {
+    padding: 12px;
+    color: $primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+
+    &.active {
+      background: $primary;
+      color: $white;
+    }
+
+  }
+
+  &:disabled {
+    background: $grey-200;
+  }
+
+  background: $white;
+  padding: 0.3rem 0.5rem 0.4rem 0.5rem;
+  border: 1px solid $grey-200;
+  border-radius: 3px;
+}
+
+.nav-btn {
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+}
+
+.page-view {
+  background: $white;
+  border-radius: 5px;
+  border: 0.5px solid $grey;
+  padding: 5px 10px;
+
+  .icon {
+    font-size: large;
+  }
+}
+
+// Info canvas
+
+.info-title {
+  @extend %font-title;
+  color: $primary;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  .finding-id {
+    font-family: 'Nunito';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .info-content {
+    position: relative;
+    top: 20px;
+    width: 60vw;
+    // padding: 0px 250px;
+    border-radius: 5px;
+
+    .field {
+      width: 20%;
+      padding: 0.5rem 0.6rem 0.5rem 0rem;
+    }
+
+
+  }
+
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+
+  .close-btn {
+    padding: 0px 10px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    color: $primary;
+  }
+}
+
+.suppress-container {
+  background: #F9FAFA;
+  padding: 24px;
+  border: 1px solid #E8E9EB;
+  border-radius: 10px;
+
+  textarea {
+    background: $white;
+    color: $black;
+    height: 15vh;
+    border: 1px solid #E8E9EB;
+    border-radius: 2px;
+  }
+}
+
+.title {
+  font-family: "Nunito";
+  font-weight: 700;
+
+}
+
+.btn-secondary {
+  color: $primary;
+  border-radius: 2px;
+  border: 1px solid $grey-200;
+  background: $white;
+  padding: 8px;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--bg-blue);
+  }
+}
+
+.filter-btn {
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background: $primary;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+
+.filter-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  margin-top: 0.8rem;
+}
+
+.custom-drop-item {
+  padding: 10px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.15), -1px -1px 5px 0px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.btn-primary-b2 {
+  color: $white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: $primary;
+  border: 1px solid transparent;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border: 1px solid $primary;
+    background: $grey-light;
+    color: $primary;
+  }
+}
+
+.btn-secondary-b2 {
+  border: 1px solid $grey-light;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: $grey-light;
+}
+
+.err-msg {
+  color: $danger;
+}
+
+.regulatory-cards {
+  height: 400px;
+}
+
+.cmdb-cards {
+  height: 400px
+}
+
+
+.w-22 {
+  width: 22vw;
+}
+
+.clr-blue {
+  color: $primary !important;
+}
+
+.blue-icon {
+  path {
+    fill: $primary;
+  }
+
+}
+
+
+.hover {
+  &:hover {
+    background: $grey-light;
+  }
+
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.page-report-alert {
+  position: absolute;
+  margin-top: 4%;
+  z-index: 1003;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.ff-lex {
+  font-family: "Lexend Deca" !important;
+}
+
+.ldap-input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: rgba(229, 232, 239, 0.75);
+  border: none;
+  margin-bottom: 10px;
+
+  &:focus {
+    background: rgba(229, 232, 239, 0.75);
+  }
+
+}
+
+
+.clickable-link {
+  color: #5e6fec;
+  font-family: "Nunito";
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.spinner-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+
+.custom-modal {
+
+  .content {
+    padding: 10px;
+  }
+}
+
+// SwitchButton.scss
+
+.switch-button {
+
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  width: 60px;
+  height: 30px;
+  background: $grey;
+  border-radius: 50px;
+  cursor: pointer;
+
+
+  input {
+    padding: 2px 3px;
+    display: none;
+  }
+
+  .switch-circle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+  }
+
+
+  input:checked+.switch-circle {
+    transform: translateX(30px);
+  }
+
+  &.checked {
+    background: #65D46D;
+  }
+
+  .switch-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 10px;
+    line-height: 16px;
+    color: $white;
+
+    &.t-90 {
+      transform: translate(-90%, -50%);
+    }
+  }
+}
+
+
+.fs-23 {
+  font-size: 0.2em;
+}
