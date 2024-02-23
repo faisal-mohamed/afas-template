@@ -1,6 +1,5 @@
 @import "../css/_variable.scss";
 
-
 @mixin custom-font($font) {
   font-family: $font;
   margin: 0;
@@ -34,7 +33,6 @@
   letter-spacing: 1px;
 }
 
-
 .pagination-wrapper {
   display: flex;
   flex-direction: row;
@@ -53,16 +51,13 @@
 .page-wrapper {
   display: inline;
   position: relative;
-  top: 0.2rem
+  top: 0.2rem;
 }
 
 .pagination-btn {
-
   i {
     color: $primary;
   }
-
-
 
   &.number {
     padding: 12px;
@@ -80,7 +75,6 @@
       background: $primary;
       color: $white;
     }
-
   }
 
   &:disabled {
@@ -121,7 +115,7 @@
   padding-bottom: 20px;
 
   .finding-id {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 20px;
     line-height: 27px;
     word-wrap: break-word;
@@ -154,12 +148,8 @@
       font-weight: 400;
       line-height: normal;
     }
-
-
   }
-
 }
-
 
 .button-container {
   display: flex;
@@ -176,20 +166,17 @@
 }
 
 .suppress-container {
-  background: #F9FAFA;
+  background: #f9fafa;
   padding: 24px;
-  border: 1px solid #E8E9EB;
+  border: 1px solid #e8e9eb;
   border-radius: 10px;
 
   .assign-container {
-
     display: flex;
     align-items: center;
     gap: 10px;
 
-
     .filter_input {
-
       .filter-label {
         color: $black;
       }
@@ -202,14 +189,13 @@
     background: $white;
     color: $black;
     height: 15vh;
-    border: 1px solid #E8E9EB;
+    border: 1px solid #e8e9eb;
     border-radius: 2px;
   }
 }
 
 .title {
   font-family: "Nunito Bold";
-
 }
 
 .btn-secondary {
@@ -234,7 +220,6 @@
   transition: all 0.3s;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 
-
   &:hover {
     background: #174ea6;
   }
@@ -244,7 +229,6 @@
   }
 }
 
-
 .filter-btn-container {
   display: inline-flex;
   gap: 5px;
@@ -253,9 +237,8 @@
 
 .custom-drop-item {
   padding: 10px;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.15), -1px -1px 5px 0px rgba(0, 0, 0, 0.15);
-
-
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.15),
+    -1px -1px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary-b2 {
@@ -293,9 +276,8 @@
 }
 
 .cmdb-cards {
-  height: 400px
+  height: 400px;
 }
-
 
 .w-22 {
   width: 22vw;
@@ -309,15 +291,12 @@
   path {
     fill: $primary;
   }
-
 }
-
 
 .hover {
   &:hover {
     background: $grey-light;
   }
-
 }
 
 .w-80 {
@@ -347,9 +326,7 @@
   &:focus {
     background: rgba(229, 232, 239, 0.75);
   }
-
 }
-
 
 .clickable-link {
   color: #5e6fec;
@@ -365,7 +342,6 @@
 }
 
 .custom-modal {
-
   .content {
     padding: 10px;
   }
@@ -374,7 +350,6 @@
 // SwitchButton.scss
 
 .switch-button {
-
   display: inline-block;
   position: relative;
   margin: 0;
@@ -383,7 +358,6 @@
   background: $grey;
   border-radius: 50px;
   cursor: pointer;
-
 
   input {
     padding: 2px 3px;
@@ -402,13 +376,12 @@
     transform: translateX(0);
   }
 
-
-  input:checked+.switch-circle {
+  input:checked + .switch-circle {
     transform: translateX(30px);
   }
 
   &.checked {
-    background: #65D46D;
+    background: #65d46d;
   }
 
   .switch-label {
@@ -425,7 +398,6 @@
     }
   }
 }
-
 
 .fs-23 {
   font-size: 0.2em;
@@ -464,7 +436,6 @@
   background: $primary;
   padding: 12px;
   color: $white;
-
 }
 
 .page-info {
@@ -481,14 +452,12 @@
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px !important;
-
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #CDD4DF;
+    background-color: #cdd4df;
     border-radius: 25px;
     margin-right: 10px;
-
   }
 
   &::-webkit-scrollbar-track {
@@ -499,7 +468,6 @@
     &::-webkit-scrollbar {
       width: 5px;
       height: 5px !important;
-
     }
   }
 }
@@ -534,4 +502,34 @@
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.overtimeCost {
+  background-color: #45cb85d9;
+}
+.averageCost {
+  background-color: #4b38b3;
+}
+.averageDays {
+  background-color: #007bff;
+}
+
+.sicknessCost {
+  background-color: #f95d6a;
+}
+.averageSicknessCost {
+  background-color: #ffa600;
+}
+.averageSicknessDays {
+  background-color: #2f4b7c;
+}
+
+.leaveCost {
+  background-color: #64ad73;
+}
+.averageLeaveCost {
+  background-color: #fff18f;
+}
+.averageLeaveDays {
+  background-color: #de425b;
 }

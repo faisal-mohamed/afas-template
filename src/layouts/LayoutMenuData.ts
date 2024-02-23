@@ -48,6 +48,6 @@ export const menuItems: MenuItems[] = [
   {
     label: "Reports",
     icon: regulatoryDashIcon,
-    path: "/executive-dashboard",
+    path: "/reports",
   },
 ];

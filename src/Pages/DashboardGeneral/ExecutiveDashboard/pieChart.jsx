@@ -42,7 +42,7 @@ const MonochromePie = ({ dataColors, data }) => {
     theme: {
       monochrome: {
         enabled: true,
-        color: "#af1834",
+        color: "#58508d",
         shadeTo: "light",
         shadeIntensity: 0.6,
       },

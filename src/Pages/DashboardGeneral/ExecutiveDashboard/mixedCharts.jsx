@@ -27,6 +27,11 @@ const Line = ({ dataColors, data}) => {
             type: "column",
             data: seriesData,
         },
+        {
+            name: "Employee Count range",
+            type: "line",
+            data: seriesData,
+        },
     ];
     const options = {
         chart: {
@@ -37,18 +42,27 @@ const Line = ({ dataColors, data}) => {
         stroke: {
             width: [0, 4],
         },
+        legend: {
+            show : false,
+          },
         dataLabels: {
             enabled: true,
             enabledOnSeries: [1],
         },
         labels: labels,
-        // xaxis: {
-        //     type: "datetime",
-        // },
         yaxis: [
             {
                 title: {
                     text: "Employee Count",
+                    style: {
+                        fontWeight: 600,
+                    },
+                },
+            },
+            {
+                opposite: true,
+                title: {
+                    text: "Employee Count range",
                     style: {
                         fontWeight: 600,
                     },

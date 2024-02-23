@@ -7,26 +7,33 @@ import getChartColorsArray from "../../../app/components/common/ChartsDynamicCol
 const BarLabelChart = ({ dataColors, data }) => {
   var chartBarLabelRotationColors = getChartColorsArray(dataColors);
 
-  const uniqueCompanies = Array.from(new Set(data.data.map((item) => item.company)));
-
   const aggregatedData = data.data.reduce((acc, currentItem) => {
-    const existingItemIndex = acc.findIndex(item => item.company === currentItem.company);
-    if (existingItemIndex !== -1) {
-        acc[existingItemIndex].numberEmployees += parseInt(currentItem.numberEmployees);
+    const existingCompanyIndex = acc.findIndex(item => item.company === currentItem.company);
+    if (existingCompanyIndex !== -1) {
+        const existingCompany = acc[existingCompanyIndex];
+        const existingDepartmentIndex = existingCompany.department.indexOf(currentItem.department);
+        if (existingDepartmentIndex !== -1) {
+            existingCompany.employeecount[existingDepartmentIndex] += parseInt(currentItem.numberEmployees);
+        } else {
+            existingCompany.department.push(currentItem.department);
+            existingCompany.employeecount.push(parseInt(currentItem.numberEmployees));
+        }
     } else {
         acc.push({
             company: currentItem.company,
-            numberEmployees: parseInt(currentItem.numberEmployees)
+            department: [currentItem.department],
+            employeecount: [parseInt(currentItem.numberEmployees)]
         });
     }
     return acc;
 }, []);
 
-const seriesData = aggregatedData.map((i)=> i.numberEmployees)
+// console.log(aggregatedData);
+
 const labels = aggregatedData.map((i)=> i.company)
+
   var app = {};
   var myChart;
-  var option;
 
   var posList = [
     "left",
@@ -118,11 +125,8 @@ const labels = aggregatedData.map((i)=> i.company)
       name: {},
     },
   };
-  // {uniqueCompanies.map((company) => {
-  //   const companyData = data.data.filter((item) => item.company === company);
-  //   const companySeriesData = companyData.map((item) => item.numberEmployees);
-  //   const companyLabels = companyData.map((item) => item.department);
-   option = {
+
+   var option = {
     grid: {
       left: "0%",
       right: "0%",
@@ -198,48 +202,17 @@ const labels = aggregatedData.map((i)=> i.company)
     textStyle: {
       fontFamily: "Poppins, sans-serif",
     },
-    series: [
-      {
-        name: "",
-        type: "bar",
-        barGap: 0,
-        label: labelOption,
-        emphasis: {
-          focus: "series",
-        },
-        data: seriesData,
+    series: aggregatedData.map((company) => ({
+      name: "",
+      type: "bar",
+      label: company.employeecount,
+      emphasis: {
+        focus: "series",
       },
-      // {
-      //   name: "",
-      //   type: "bar",
-      //   label: labelOption,
-      //   emphasis: {
-      //     focus: "series",
-      //   },
-      //   data: [220, 182, 191, 234, 290],
-      // },
-      // {
-      //   name: "",
-      //   type: "bar",
-      //   label: labelOption,
-      //   emphasis: {
-      //     focus: "series",
-      //   },
-      //   data: [150, 232, 201, 154, 190],
-      // },
-      // {
-      //   name: "",
-      //   type: "bar",
-      //   label: labelOption,
-      //   emphasis: {
-      //     focus: "series",
-      //   },
-      //   data: [98, 77, 101, 99, 40],
-      // },
-    ],
-  };
-// })}
+      data: company.employeecount,
+    })),
 
+  };
   return (
     <React.Fragment>
       <ReactEcharts style={{ height: "350px" }} option={option} />

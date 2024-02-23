@@ -3,19 +3,21 @@ import { Col, Card, CardBody, CardHeader, Row, Button } from "reactstrap";
 import ReactApexChart from "react-apexcharts";
 import CountUp from "react-countup";
 
-const OvertimeCostChart = ({data}) => {
-    const series = [
+const SicknessChart = ({data}) => {
+  
+  const series = [
     {
-      name: "Overtime Cost",
-      data: data?.totalChartOvertimeCosts|| [],
+      name: "Sickness Cost",
+      data: data?.totalChartSicknessCosts|| [],
     },
     {
-      name: "Average Cost",
-      data: data?.averageOvertimeCostsPerEmployee || [],
+      name: "Average Sickness Cost",
+      data: data?.averageChartSicknessCosts || [],
     },
     {
-      name: "Average Days",
-      data: data?.totalChartLeaveDays || [],
+      name: "Average Sickness Days",
+      data: data?.totalSicknessLeaveDays
+ || [],
     },
   ];
   const options = {
@@ -29,7 +31,7 @@ const OvertimeCostChart = ({data}) => {
         show: true,
       },
     },
-    colors: ["#45cb85d9", "#4b38b3", "#007bff"],
+    colors: ["#f95d6a", "#ffa600", "#2f4b7c"],
 
     dataLabels: {
       enabled: false,
@@ -41,16 +43,17 @@ const OvertimeCostChart = ({data}) => {
     },
     series: [
       {
-        name: "Overtime Cost",
-        data: data?.totalChartOvertimeCosts || [],
+        name: "Sickness Cost",
+        data: data?.totalChartSicknessCosts || [],
       },
       {
-        name: "Average Cost",
-        data: data?.averageOvertimeCostsPerEmployee || [],
+        name: "Average Sickness Cost",
+        data: data?.averageChartSicknessCosts || [],
       },
       {
-        name: "Average Days",
-        data: data?.totalChartLeaveDays || [],
+        name: "Average Sickness Days",
+        data: data?.totalSicknessLeaveDays
+ || [],
       },
     ],
     markers: {
@@ -61,8 +64,7 @@ const OvertimeCostChart = ({data}) => {
       },
     },
     xaxis: {
-      name:"month",
-      categories: data?.month || [],
+      categories: data?.sicknessMonth || [],
     },
     grid: {
       borderColor: "#f1f1f1",
@@ -75,7 +77,7 @@ const OvertimeCostChart = ({data}) => {
         <Card className="card-height-100">
           <CardHeader className="border-0 align-items-center d-flex">
             <h4 className="card-title mb-0 flex-grow-1">
-              Overtime Cost
+              Sickness Cost
             </h4>
           </CardHeader>
 
@@ -131,4 +133,4 @@ const OvertimeCostChart = ({data}) => {
   );
 };
 
-export default OvertimeCostChart;
+export default SicknessChart;

@@ -86,7 +86,7 @@ const Signin = () => {
           <Row className="mt-2">
             <Col>
               <div className="text-center">
-                <div className="title">Signin</div>
+                <div className="title">Login</div>
               </div>
 
               <form onSubmit={handleSubmit}>
@@ -126,7 +126,7 @@ const Signin = () => {
                     </p> */}
                     <CommonButton className="primary-btn">
                       {!isLoading ? (
-                        "SignIn"
+                        "Proceed"
                       ) : (
                         <Spinner size="sm" className="flex-shrink-0"></Spinner>
                       )}

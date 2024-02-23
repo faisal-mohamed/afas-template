@@ -8,6 +8,9 @@ const Login = lazy(() => import("../../Auth/Signin"));
 const Dashboards = lazy(
   () => import("../../Pages/DashboardGeneral/ExecutiveDashboard/index")
 );
+const Reports = lazy(
+  () => import("../../Pages/DashboardGeneral/Report/index")
+);
 
 export const publicRoutes = [
   {
@@ -25,4 +28,5 @@ export const authProtectedRoutes = [
   },
   { name: "Dashboards", path: "/", component: <Navigate to="/dashboards" /> },
   { name: "Dashboards", path: "/dashboards", component: <Dashboards /> },
+  { name: "Reports", path: "/reports", component: <Reports /> },
 ];
