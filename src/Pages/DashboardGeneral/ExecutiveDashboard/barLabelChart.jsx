@@ -7,6 +7,7 @@ import getChartColorsArray from "../../../app/components/common/ChartsDynamicCol
 const BarLabelChart = ({ dataColors, data }) => {
   var chartBarLabelRotationColors = getChartColorsArray(dataColors);
 
+  console.log("djdcvguysdgacudgaata", data)
   const aggregatedData = data.data.reduce((acc, currentItem) => {
     const existingCompanyIndex = acc.findIndex(item => item.company === currentItem.company);
     if (existingCompanyIndex !== -1) {
@@ -202,15 +203,44 @@ const labels = aggregatedData.map((i)=> i.company)
     textStyle: {
       fontFamily: "Poppins, sans-serif",
     },
-    series: aggregatedData.map((company) => ({
-      name: "",
-      type: "bar",
-      label: company.employeecount,
+    series: [{
+      name: 'Comm - Commercial',
+      type: 'bar',
+      barGap: 0,
+      label: labelOption,
       emphasis: {
-        focus: "series",
+          focus: 'series'
       },
-      data: company.employeecount,
-    })),
+      data: [320, 32, 301, 734, 220]
+  },
+  {
+      name: 'F&CS - Finance & Corporate Services',
+      type: 'bar',
+      label: labelOption,
+      emphasis: {
+          focus: 'series'
+      },
+      data: [20, 182, 191, 234, 290]
+  },
+  {
+      name: 'HR & OD',
+      type: 'bar',
+      label: labelOption,
+      emphasis: {
+          focus: 'series'
+      },
+      data: [150, 262, 231, 154, 190]
+  },
+  {
+      name: 'MD and MD Support',
+      type: 'bar',
+      label: labelOption,
+      emphasis: {
+          focus: 'series'
+      },
+      data: [98, 77, 101, 99, 40]
+  }
+  ]
 
   };
   return (
