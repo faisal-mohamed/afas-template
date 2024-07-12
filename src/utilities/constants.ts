@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+import { ToastPosition, toast } from "react-toastify";
 import {
   cmdbDashIcon,
   executiveDashIcon,
@@ -14,7 +14,7 @@ export type TableInfo = {
 
 const toastSuccessOptions = {
   className: "toast_success",
-  position: toast.POSITION.TOP_CENTER,
+  position: "top_center" as ToastPosition,
   autoClose: 3000,
   hideProgressBar: false,
   closeOnClick: true,
@@ -24,7 +24,7 @@ const toastSuccessOptions = {
 };
 
 const toastErrorOptions = {
-  position: toast.POSITION.TOP_CENTER,
+  position: "top_center" as ToastPosition,
   autoClose: 3000,
   hideProgressBar: false,
   closeOnClick: true,
@@ -37,7 +37,7 @@ const toastErrorOptions = {
 };
 
 const toastWarningOption = {
-  position: toast.POSITION.TOP_CENTER,
+  position: "top_center" as ToastPosition,
   autoClose: 3000,
   hideProgressBar: false,
   closeOnClick: true,
@@ -50,7 +50,7 @@ const toastWarningOption = {
 };
 
 const toastInfoOption = {
-  position: toast.POSITION.TOP_CENTER,
+  position: "top_center" as ToastPosition,
   autoClose: 5000,
   hideProgressBar: false,
   closeOnClick: true,

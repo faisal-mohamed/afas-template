@@ -49,5 +49,15 @@ export const menuItems: MenuItems[] = [
     label: "Reports",
     icon: regulatoryDashIcon,
     path: "/reports",
+    childNavs: [
+      {
+        label: "Test-1",
+        path: "/reports",
+      }, 
+      {
+        label: "Test-2",
+        path: "/reports",
+      }
+    ]
   },
 ];

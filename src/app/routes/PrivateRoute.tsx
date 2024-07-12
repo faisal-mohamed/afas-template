@@ -8,7 +8,7 @@ const PrivateRoute = () => {
   const [loading, setLoading] = React.useState<boolean>(true);
   const userToken = sessionStorage.getItem("username");
   // const currentLoginUser = sessionStorage.getItem("currentSessionUser");
-  // const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (userToken) {
@@ -23,7 +23,7 @@ const PrivateRoute = () => {
   ) : userToken ? (
     <Layouts />
   ) : (
-    <Navigate to="/login" state={{ from: location }} replace />
+    <Navigate to="/login" state={{ from: location }}  />
   );
 };
 
