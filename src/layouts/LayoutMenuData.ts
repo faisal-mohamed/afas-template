@@ -19,45 +19,69 @@ type SubMenuItems = {
   childNavs?: SubMenuItems[];
 };
 
+// export const menuItems: MenuItems[] = [
+//   {
+//     label: "Executive Dashboard",
+//     icon: DashboardIcon,
+//     path: "/executive-dashboard",
+//   },
+//   {
+//     label: "Management Dashboard",
+//     icon: FindingsIcon,
+//     path: "/executive-dashboard",
+//   },
+//   {
+//     label: "Department Dashboard",
+//     icon: iamDashIcon,
+//     path: "/executive-dashboard",
+//   },
+//   {
+//     label: "Employee Dashboard",
+//     icon: EmployeesIcon,
+//     path: "/executive-dashboard",
+//   },
+//   {
+//     label: "Hr Advisor Dashboard",
+//     icon: RegulationIcon,
+//     path: "/executive-dashboard",
+//   },
+//   {
+//     label: "Reports",
+//     icon: regulatoryDashIcon,
+//     path: "/reports",
+//     childNavs: [
+//       {
+//         label: "Test-1",
+//         path: "/reports",
+//       }, 
+//       {
+//         label: "Test-2",
+//         path: "/reports",
+//       }
+//     ]
+//   },
+// ];
+
+
 export const menuItems: MenuItems[] = [
   {
-    label: "Executive Dashboard",
+    label: "Dashboard",
     icon: DashboardIcon,
-    path: "/executive-dashboard",
+    path: "/dashboard",
   },
   {
-    label: "Management Dashboard",
+    label: "Member Journey",
     icon: FindingsIcon,
-    path: "/executive-dashboard",
+    path: "/member-journey",
   },
   {
-    label: "Department Dashboard",
+    label: "Child Portal",
     icon: iamDashIcon,
-    path: "/executive-dashboard",
-  },
-  {
-    label: "Employee Dashboard",
-    icon: EmployeesIcon,
-    path: "/executive-dashboard",
-  },
-  {
-    label: "Hr Advisor Dashboard",
-    icon: RegulationIcon,
-    path: "/executive-dashboard",
+    path: "/child-portal",
   },
   {
     label: "Reports",
-    icon: regulatoryDashIcon,
+    icon: EmployeesIcon,
     path: "/reports",
-    childNavs: [
-      {
-        label: "Test-1",
-        path: "/reports",
-      }, 
-      {
-        label: "Test-2",
-        path: "/reports",
-      }
-    ]
   },
 ];

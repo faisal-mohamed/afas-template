@@ -5,6 +5,8 @@ import { logo } from "../assets/Images";
 import { MenuItems, menuItems } from "./LayoutMenuData";
 import "./custom-layout.scss";
 
+import Logo from '../../src/assets/Images/logo/health_care.png';
+
 const Menu = () => {
   const [activeNav, setActiveNav] = useState<string>("/executive-dashboards");
 
@@ -29,7 +31,8 @@ const Menu = () => {
     <div className="sidebar-wrapper">
       <div className="brand">
         <Link to="/" className="logo logo-dark">
-          <SVG src={logo} width={72} height={55} className="logo" />
+         {/* { <SVG src={logo} width={72} height={55} className="logo" />} */}
+         <img src={Logo} alt="Side bar Logo" style={{width: '80px', height: '80px'}} className="logo" />
         </Link>
       </div>
       <div className="sidebar-container">

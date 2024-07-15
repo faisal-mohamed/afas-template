@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.6",
+    "@types/react-flatpickr": "^3.8.11",
+    "@types/reactstrap": "^8.7.2",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
     "echarts": "^5.5.0",
